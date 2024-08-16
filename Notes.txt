@@ -1,0 +1,14 @@
+Window Class
+	- Main Window (Default window of application)
+		-min max and close button
+	-WindowState
+		- controls initial window state
+	-WindowStartupLocation
+		- Control Location (Top, Left properties etc)
+	-Topmost
+	-SizeToContents
+		- Manual by default
+	-ShowInTaskbar
+	-Icon
+
+MSDN Pages

@@ -1,0 +1,15 @@
+C:\Users\PC\source\repos\Tabs\TabsGenerator\bin\Debug\TabsGenerator.exe.config
+C:\Users\PC\source\repos\Tabs\TabsGenerator\bin\Debug\TabsGenerator.exe
+C:\Users\PC\source\repos\Tabs\TabsGenerator\bin\Debug\TabsGenerator.pdb
+C:\Users\PC\source\repos\Tabs\TabsGenerator\obj\Debug\TabsGenerator.csproj.AssemblyReference.cache
+C:\Users\PC\source\repos\Tabs\TabsGenerator\obj\Debug\MainWindow.g.cs
+C:\Users\PC\source\repos\Tabs\TabsGenerator\obj\Debug\App.g.cs
+C:\Users\PC\source\repos\Tabs\TabsGenerator\obj\Debug\TabsGenerator_MarkupCompile.cache
+C:\Users\PC\source\repos\Tabs\TabsGenerator\obj\Debug\TabsGenerator_MarkupCompile.lref
+C:\Users\PC\source\repos\Tabs\TabsGenerator\obj\Debug\MainWindow.baml
+C:\Users\PC\source\repos\Tabs\TabsGenerator\obj\Debug\TabsGenerator.g.resources
+C:\Users\PC\source\repos\Tabs\TabsGenerator\obj\Debug\TabsGenerator.Properties.Resources.resources
+C:\Users\PC\source\repos\Tabs\TabsGenerator\obj\Debug\TabsGenerator.csproj.GenerateResource.cache
+C:\Users\PC\source\repos\Tabs\TabsGenerator\obj\Debug\TabsGenerator.csproj.CoreCompileInputs.cache
+C:\Users\PC\source\repos\Tabs\TabsGenerator\obj\Debug\TabsGenerator.exe
+C:\Users\PC\source\repos\Tabs\TabsGenerator\obj\Debug\TabsGenerator.pdb

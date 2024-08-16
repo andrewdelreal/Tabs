@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4B84C6AF-2143-4F45-9F34-29E4C40DFA17}</ProjectGuid>
+    <ProjectGuid>{C8F4F4EF-E392-49FB-B6C5-36147E670DFD}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>TabsGenerator</RootNamespace>
     <AssemblyName>TabsGenerator</AssemblyName>
