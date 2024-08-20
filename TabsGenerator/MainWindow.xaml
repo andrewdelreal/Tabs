@@ -5,8 +5,88 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TabsGenerator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="Tabs Generator" Height="500" Width="500" AllowsTransparency="False">
+    <!--Main Grid Defenition-->
+    <Grid Background="#F0F0FF">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="65"/> <!--Title-->
+            <RowDefinition/>             <!--Center Grid-->
+            <RowDefinition Height=".1*"/> <!--Bottom-->
+        </Grid.RowDefinitions>
         
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
+        <!--Title-->
+        <TextBlock Grid.Row="0" TextBlock.TextAlignment="Center" FontSize="55" FontFamily="Times New Roman">
+            <Bold>Tabs Generator</Bold> 
+        </TextBlock>
+        
+        <!--Main Grid-->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width=".50*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <!--Left Side Options-->
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <!-- Random Tabs Generation -->
+                <Grid Grid.Row="4">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <CheckBox x:Name="randomCheck"
+                              Grid.Column="0" 
+                              HorizontalAlignment="Center" 
+                              VerticalAlignment="Center" 
+                              VerticalContentAlignment="Center" 
+                              IsChecked="True">
+                        <TextBlock Text="Random Generation" TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalAlignment="Top"/>
+                    </CheckBox>
+                    <TextBlock
+                        Grid.Column="1"
+                        TextWrapping="WrapWithOverflow"
+                        FontSize="10"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center">
+                        Checking this produces random Tabs generation. 
+                    </TextBlock>
+                </Grid>
+                
+            </Grid>
+            
+            <!--Middle Column-->
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height=".2*"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                
+                <!--Create Button-->
+                <Button 
+                    x:Name="createButton"
+                    Grid.Row="1" 
+                    Style="{StaticResource ButtonStyle}" 
+                    FontSize="19"  
+                    Content="Create Tabs" 
+                    Click="Button_Click"/>
+            </Grid>
+        </Grid>
+        
+        <!--Bottom Block-->
     </Grid>
+        
 </Window>
+    

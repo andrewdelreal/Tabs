@@ -1,0 +1,151 @@
+Window Class
+	- Main Window (Default window of application)
+		-min max and close button
+	-WindowState
+		- controls initial window state
+	-WindowStartupLocation
+		- Control Location (Top, Left properties etc)
+	-Topmost
+	-SizeToContents
+		- Manual by default
+	-ShowInTaskbar
+	-Icon
+
+MSDN Pages
+
+XAML
+	- Extention of XML namespace
+	- XML Syntax
+
+XMLNS
+	- Defines Namespace to resolve elements
+
+	ex. 
+	<Label x:Name=
+	x:Name is XAML namespace
+	Label is just default XML namespace
+
+
+d:
+	design State
+		d:DesignHeight
+		d:DesignWidth
+
+		These are only for the designers
+
+mc:
+	Markup Compatability
+	Ignorable=
+	
+
+local:
+	<local:MyFolder/>
+	- where to find This folder within local project folder
+
+WPF Boilerplate Code
+	App.config
+	- startup, version, encoding config
+	- where the .NET runtimes are defined
+
+	- containt variable configurations
+	- Connection strings to databases
+		- may be useful later
+	- Connection details to external services
+	
+
+	APP.xaml
+	- Defines global resources
+
+<TextBlock>
+	- <Bold>
+	- <Italic>
+	- <LineBreak>
+	- <Hyperlink>
+	- TextTrimming="None", 
+	-TextWrapping="Wrap", "WrapWithOverflow"
+	- Foreground=""
+	- <Span Foreground="Black" > Black Text</Span>
+
+<StackPanel>
+        <Label
+            Margin="10"
+            BorderThickness="1"
+            BorderBrush="Black"
+            >
+            <StackPanel>
+                <Image Width="60" Source="https:://one.png"></Image>
+                <AccessText FontSize="20" Text="Message"></AccessText>
+            </StackPanel>
+        </Label>
+        <TextBox
+            FontSize="30"
+            Margin="10"
+            >
+            Hello
+        </TextBox>
+    </StackPanel>
+
+<TextBox 
+            FontSize="20" 
+            Margin="15"
+            AcceptsReturn="True"
+            TextWrapping="Wrap"
+            SpellCheck.IsEnabled="True"
+            Language="en-US"
+            IsReadOnly="False"
+            >
+            
+        </TextBox>
+
+
+<Button x:Name="myButton" 
+                Width="50" 
+                Content="Click" 
+                Click="Button_Click" 
+                MouseDoubleClick="myButton_MouseDoubleClick">
+            
+</Button>
+<Label FontSize ="16" Name="myLabel">Test</Label>
+
+<StackPanel>
+        <Label FontSize="16" Name="myLabel">Test</Label>
+        <RadioButton x:Name="red_button" GroupName="Colors" Checked="red_Checked" Unchecked="red_button_Unchecked">Red</RadioButton>
+        <RadioButton GroupName="Colors">Green</RadioButton>
+        <RadioButton GroupName="Colors">Blue</RadioButton>
+
+        <Label FontSize="16">Test</Label>
+        <RadioButton GroupName="Colors1">Red</RadioButton>
+        <RadioButton GroupName="Colors1">Green</RadioButton>
+        <RadioButton GroupName="Colors1">Blue</RadioButton>
+</StackPanel>
+
+<StackPanel>
+    <Label FontSize="16" Name="myLabel">Test</Label>
+    <CheckBox>Red</CheckBox>
+    <CheckBox>Green</CheckBox>
+    <CheckBox>Blue</CheckBox>
+</StackPanel>
+
+
+Overall Designs
+	- Random Tabs
+	- Range of notes
+	- Variance between notes
+	- Stay in natural key for now
+	- Use a dictionary of tabs? 
+		- If the tab is Sharp, Add one, Flat, minus one
+		- Maybe a dictionary of increments in the natural key, that is altered depending on the tab
+
+First
+	- Random Notes
+
+
+Later Implementations
+	- Time Signiatures
+	- Keys
+
+Left Grid
+	- 
+
+
+Need to make character width constant

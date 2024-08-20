@@ -13,3 +13,4 @@ C:\Users\PC\source\repos\Tabs\TabsGenerator\obj\Debug\TabsGenerator.csproj.Gener
 C:\Users\PC\source\repos\Tabs\TabsGenerator\obj\Debug\TabsGenerator.csproj.CoreCompileInputs.cache
 C:\Users\PC\source\repos\Tabs\TabsGenerator\obj\Debug\TabsGenerator.exe
 C:\Users\PC\source\repos\Tabs\TabsGenerator\obj\Debug\TabsGenerator.pdb
+C:\Users\PC\source\repos\Tabs\TabsGenerator\obj\Debug\App.baml

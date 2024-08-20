@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\PC\\source\\repos\\Tabs\\TabsGenerator\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C8F4F4EF-E392-49FB-B6C5-36147E670DFD}|TabsGenerator.csproj|c:\\users\\pc\\source\\repos\\tabs\\tabsgenerator\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{C8F4F4EF-E392-49FB-B6C5-36147E670DFD}|TabsGenerator.csproj|c:\\users\\pc\\source\\repos\\tabs\\tabsgenerator\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8F4F4EF-E392-49FB-B6C5-36147E670DFD}|TabsGenerator.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8F4F4EF-E392-49FB-B6C5-36147E670DFD}|TabsGenerator.csproj|C:\\Users\\PC\\source\\repos\\Tabs\\TabsGenerator\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{C8F4F4EF-E392-49FB-B6C5-36147E670DFD}|TabsGenerator.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8F4F4EF-E392-49FB-B6C5-36147E670DFD}|TabsGenerator.csproj|c:\\users\\pc\\source\\repos\\tabs\\tabsgenerator\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8F4F4EF-E392-49FB-B6C5-36147E670DFD}|TabsGenerator.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C8F4F4EF-E392-49FB-B6C5-36147E670DFD}|TabsGenerator.csproj|C:\\Users\\PC\\source\\repos\\Tabs\\TabsGenerator\\notes.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{C8F4F4EF-E392-49FB-B6C5-36147E670DFD}|TabsGenerator.csproj|solutionrelative:notes.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,27 +34,40 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\Tabs\\TabsGenerator\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\PC\\source\\repos\\Tabs\\TabsGenerator\\MainWindow.xaml.cs",
-              "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T15:40:14.545Z",
+              "DocumentIndex": 2,
+              "Title": "Notes.txt",
+              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\Tabs\\TabsGenerator\\Notes.txt",
+              "RelativeDocumentMoniker": "Notes.txt",
+              "ToolTip": "C:\\Users\\PC\\source\\repos\\Tabs\\TabsGenerator\\Notes.txt",
+              "RelativeToolTip": "Notes.txt",
+              "ViewState": "AgIAAIUAAAAAAAAAAAAAAJYAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-08-16T15:44:30.042Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\Tabs\\TabsGenerator\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\PC\\source\\repos\\Tabs\\TabsGenerator\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAAAI8AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T16:12:19.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\Tabs\\TabsGenerator\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
               "ToolTip": "C:\\Users\\PC\\source\\repos\\Tabs\\TabsGenerator\\MainWindow.xaml",
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-08-16T15:40:14.728Z",
+              "WhenOpened": "2024-08-16T17:00:20.127Z",
               "EditorCaption": ""
             }
           ]
