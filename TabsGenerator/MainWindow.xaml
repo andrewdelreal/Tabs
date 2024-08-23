@@ -9,20 +9,23 @@
     <!--Main Grid Defenition-->
     <Grid Background="#F0F0FF">
         <Grid.RowDefinitions>
-            <RowDefinition Height="65"/> <!--Title-->
-            <RowDefinition/>             <!--Center Grid-->
-            <RowDefinition Height=".1*"/> <!--Bottom-->
+            <RowDefinition Height="65"/>
+            <!--Title-->
+            <RowDefinition/>
+            <!--Center Grid-->
+            <RowDefinition Height=".1*"/>
+            <!--Bottom-->
         </Grid.RowDefinitions>
-        
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        
+
         <!--Title-->
         <TextBlock Grid.Row="0" TextBlock.TextAlignment="Center" FontSize="55" FontFamily="Times New Roman">
-            <Bold>Tabs Generator</Bold> 
+            <Bold>Tabs Generator</Bold>
         </TextBlock>
-        
+
         <!--Main Grid-->
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
@@ -40,8 +43,113 @@
                     <RowDefinition/>
                 </Grid.RowDefinitions>
 
+                <!--Measures Beats-->
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="63*"/>
+                        <ColumnDefinition Width="37*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        TextAlignment="Left"
+                        VerticalAlignment="Center"
+                        TextWrapping="WrapWithOverflow"
+                        Margin="8,0,0,0">
+                        
+                        Number of Measures to Generate
+                    </TextBlock>
+
+
+                    <TextBox
+                        x:Name="Num_Measures_Text_Box"
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Height="20"
+                        Width="30"
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Center"
+                        Margin="0,10,0,0"
+                        Text="14"
+                        TextAlignment="Right"
+                        KeyDown="Num_Measures_KeyDown"
+                        LostFocus="Num_Measures_LostFocus"
+                        >
+
+                    </TextBox>
+
+                </Grid>
+
+                <!--Highest and Lowest Fret-->
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Margin="8,0,0,0"
+                        VerticalAlignment="Center">
+                        Highest Fret
+                    </TextBlock>
+
+                    <TextBlock
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Margin="8,0,0,0"
+                        VerticalAlignment="Center">
+                        Lowest Fret
+                    </TextBlock>
+
+                    <TextBox
+                        x:Name="Highest_Fret_Text_Box"
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Height="20"
+                        Width="30"
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Center"
+                        Margin="0,10,0,0"
+                        Text="5"
+                        TextAlignment="Right"
+                        LostFocus="Highest_Fret_Text_Box_LostFocus"
+                        PreviewTextInput="Highest_Fret_Text_Box_PreviewTextInput">
+                    </TextBox>
+                    
+                    <TextBox
+                        x:Name="Lowest_Fret_Text_Box"
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Height="20"
+                        Width="30"
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Center"
+                        Margin="0,10,0,0"
+                        Text="0"
+                        TextAlignment="Right"
+                        LostFocus="Lowest_Fret_Text_Box_LostFocus"
+                        PreviewTextInput="Lowest_Fret_Text_Box_PreviewTextInput">
+                    </TextBox>
+
+                   
+
+                </Grid>
+
                 <!-- Random Tabs Generation -->
-                <Grid Grid.Row="4">
+                <Grid Grid.Row="3">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                         <ColumnDefinition/>
@@ -60,12 +168,12 @@
                         FontSize="10"
                         VerticalAlignment="Center"
                         HorizontalAlignment="Center">
-                        Checking this produces random Tabs generation. 
+                        Checking this produces random Tabs generation.
                     </TextBlock>
                 </Grid>
-                
+
             </Grid>
-            
+
             <!--Middle Column-->
             <Grid Grid.Column="1">
                 <Grid.RowDefinitions>
@@ -73,7 +181,7 @@
                     <RowDefinition Height=".2*"/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                
+
                 <!--Create Button-->
                 <Button 
                     x:Name="createButton"
@@ -84,9 +192,9 @@
                     Click="Button_Click"/>
             </Grid>
         </Grid>
-        
+
         <!--Bottom Block-->
     </Grid>
-        
+
 </Window>
     

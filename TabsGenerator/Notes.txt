@@ -148,4 +148,20 @@ Left Grid
 	- 
 
 
-Need to make character width constant
+Things to do.
+
+	- Add for more lines. Done
+		- I can either make each bar generation randomized
+		- Or make it all in one string
+	- Add UI elements to get the things like lowest and highest fret, measures, and num of notes -- Mostly done with UI protection
+	- For the measures, if the num of measures * num of notes * note space is too high, then separate lines
+	- Make beats and measures and notespacing combine to make the new max amount of measures
+	- will need to change the printing if the character of fret is longer than one -- Done
+
+	- Chords
+
+
+	- Keys
+
+	- Double Stops
+
