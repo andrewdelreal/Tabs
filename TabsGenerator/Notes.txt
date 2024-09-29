@@ -157,8 +157,10 @@ Things to do.
 	- will need to change the printing if the character of fret is longer than one -- Done
 
 	- Chords
+		- Made all the chords I know
+		- Works by itself
 
-	- Change which strings to use
+	- Change which strings to use -- Done
 		
 
 
@@ -167,8 +169,39 @@ Things to do.
 	- Double Stops
 
 
-	- Fill in chord dictionary
-	- Make notespacing larger for chord/ make placement of next chord at least two spaces away
+	- Fill in chord dictionary -- Done
+	- Make notespacing larger for chord/ make placement of next chord at least two spaces away -- Adjustable
 
 
-	- make the random notes and chords return the retstring, The measure handling will all be in the random methods
+	- make the random notes and chords return the retstring, The measure handling will all be in the random methods -- Done
+	- Will need to add generating both notes and chords.
+
+	- Cleanup variable names
+	- how to do Chord and Note Generation.
+	- I need to make a ratio of notes to chords based on the sent in information
+	- I need to make the spacing dynamic to each side of the UI.
+	- Each line needs to have the ratio of strings to chords. Then generate the order of notes and strings. Maybe make this a list
+		of function calls. TO just call each insert?
+
+		- will need to work on making all the measures per line and update the 
+		remaining measures with the correct amount of measures based on the spacing of the
+		notes and chords
+		- Will need to add the notes and chords based on the strings
+
+
+Manual Tabs
+- Set up reading a file - Done
+- Set up Editing a file - Need to make mouse cursor only
+- Set up saving a file	- Need to be able to choose name and path
+
+- I have set up a file opening a file to get a path
+	- need to get a file to open and read it.
+
+Need to then save the file, which should be easier than reading it and printing it.
+
+- Choose where to save. 
+- Load a file should be easy. Should be able to just read a text file using a System IO method or -- done
+
+- update text box to insert only instead of deleting
+
+

@@ -37,10 +37,11 @@
             <!--Left Side Options-->
             <Grid Grid.Column="0">
                 <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
+                    <RowDefinition Height="18*"/>
+                    <RowDefinition Height="18*"/>
+                    <RowDefinition Height="18*"/>
+                    <RowDefinition Height="18*"/>
+                    <RowDefinition Height="18*"/>
                 </Grid.RowDefinitions>
 
                 <!--Measures Beats-->
@@ -90,8 +91,7 @@
                         Text="14"
                         TextAlignment="Right"
                         KeyDown="Num_Measures_KeyDown"
-                        LostFocus="Num_Measures_LostFocus"
-                        >
+                        LostFocus="Num_Measures_LostFocus">
 
                     </TextBox>
 
@@ -107,8 +107,7 @@
                         Text="3"
                         TextAlignment="Right"
                         KeyDown="Note_Spacing_Text_Box_KeyDown"
-                        LostFocus="Note_Spacing_Text_Box_LostFocus"
-                        >
+                        LostFocus="Note_Spacing_Text_Box_LostFocus">
 
                     </TextBox>
 
@@ -117,8 +116,8 @@
                 <!--Highest and Lowest Fret-->
                 <Grid Grid.Row="1">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
+                        <ColumnDefinition Width="63*"/>
+                        <ColumnDefinition Width="37*"/>
                     </Grid.ColumnDefinitions>
 
                     <Grid.RowDefinitions>
@@ -155,6 +154,7 @@
                         TextAlignment="Right"
                         LostFocus="Highest_Fret_Text_Box_LostFocus"
                         PreviewTextInput="Highest_Fret_Text_Box_PreviewTextInput">
+                        
                     </TextBox>
 
                     <TextBox
@@ -170,36 +170,46 @@
                         TextAlignment="Right"
                         LostFocus="Lowest_Fret_Text_Box_LostFocus"
                         PreviewTextInput="Lowest_Fret_Text_Box_PreviewTextInput">
+                        
                     </TextBox>
-
-
-
                 </Grid>
 
-                <!-- Random Tabs Generation -->
-                <Grid Grid.Row="3">
+                <Grid Grid.Row="2">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
+                        <ColumnDefinition Width="63*"/>
+                        <ColumnDefinition Width="37*"/>
                     </Grid.ColumnDefinitions>
-                    <CheckBox x:Name="randomCheck"
-                              Grid.Column="0" 
-                              HorizontalAlignment="Center" 
-                              VerticalAlignment="Center" 
-                              VerticalContentAlignment="Center" 
-                              IsChecked="True">
-                        <TextBlock Text="Random Generation" TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalAlignment="Top"/>
-                    </CheckBox>
-                    <TextBlock
-                        Grid.Column="1"
-                        TextWrapping="WrapWithOverflow"
-                        FontSize="10"
-                        VerticalAlignment="Center"
-                        HorizontalAlignment="Center">
-                        Checking this produces random Tabs generation.
-                    </TextBlock>
-                </Grid>
 
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Margin="8,0,0,0"
+                        VerticalAlignment="Center">
+                        Active Strings
+                    </TextBlock>
+
+                    <ComboBox
+                        x:Name="StringDropDown"
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Margin="5,5">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <CheckBox IsChecked="{Binding IsSelected}" Width="20"/>
+                                    <TextBlock Text="{Binding Text}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+
+
+                </Grid>
             </Grid>
 
             <!--Middle Column-->
@@ -210,6 +220,26 @@
                     <RowDefinition/>
                 </Grid.RowDefinitions>
 
+                <StackPanel
+                    Grid.Row="0">
+                    <TextBlock FontSize="11" FontFamily="Times New Roman">
+                        Generation Pattern
+                    </TextBlock>
+                    <RadioButton 
+                        x:Name="RandomNotesCheck"
+                        Content="Random Notes" 
+                        FontSize="11" 
+                        IsChecked="True"/>
+                    <RadioButton 
+                        x:Name="RandomChordsCheck"
+                        Content="Random Chords" 
+                        FontSize="11"/>
+                    <RadioButton 
+                        x:Name="BothNotesAndChordsCheck"
+                        Content="Both" 
+                        FontSize="11"/>
+                </StackPanel>
+                
                 <!--Create Button-->
                 <Button 
                     x:Name="createButton"
@@ -228,7 +258,8 @@
                     <RowDefinition/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <Grid>
+                <Grid
+                    Grid.Row="0">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                         <RowDefinition/>
@@ -282,31 +313,52 @@
 
                         </TextBox>
                     </Grid>
+
+                    
                 </Grid>
 
-
-                <Grid Grid.Row="3">
+                <!--Manual Tabs-->
+                <Grid
+                    Grid.Row="2">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
+                        <ColumnDefinition Width="1.0*"/>
+                        <ColumnDefinition Width="1.0*"/>
                     </Grid.ColumnDefinitions>
-                    <CheckBox 
-                        x:Name="chordCheck"
-                            Grid.Column="0" 
-                            HorizontalAlignment="Center" 
-                            VerticalAlignment="Center" 
-                            VerticalContentAlignment="Center" 
-                            IsChecked="False">
-                        <TextBlock Text="Random Chord Generation" TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalAlignment="Top"/>
-                    </CheckBox>
-                    <TextBlock
+
+                    <Grid
+                        Grid.Column="0" Height="95" VerticalAlignment="Bottom">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock
+                            Grid.Row="0"
+                            x:Name="SelectFileNameText"
+                            TextAlignment="Center"
+                            VerticalAlignment="Top"
+                            TextWrapping="WrapWithOverflow"
+                            Margin="8,0,8,0">
+                            
+                            New File
+                        </TextBlock>
+
+                        <Button
+                            Grid.Row="1"
+                            Content="Select File"
+                            Click="Button_Click_1">
+                        </Button>
+                    </Grid>
+                    
+                    <Button
+                        x:Name="ManualCreateButton"
                         Grid.Column="1"
-                        TextWrapping="WrapWithOverflow"
-                        FontSize="10"
-                        VerticalAlignment="Center"
-                        HorizontalAlignment="Center">
-                        Checking this produces random chord Tabs generation.
-                    </TextBlock>
+                        Style="{StaticResource ButtonStyle}"
+                        Content="Manual Tabs"
+                        Margin="10,10,10,10"
+                        Click="ManualCreateButton_Click">
+
+                    </Button>
                 </Grid>
             </Grid>
         </Grid>
