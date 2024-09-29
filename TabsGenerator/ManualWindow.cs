@@ -180,32 +180,6 @@ namespace TabsGenerator
             return !string.IsNullOrEmpty(input) && input.All(c => !char.IsControl(c));
         }
 
-        private char KeyToChar(Key key)
-        {
-            // Handle letters
-            if (key >= Key.A && key <= Key.Z)
-            {
-                return (char)('A' + (key - Key.A));
-            }
-
-            // Handle numbers from the top row of the keyboard
-            if (key >= Key.D0 && key <= Key.D9)
-            {
-                return (char)('0' + (key - Key.D0));
-            }
-
-            // Handle numbers from the numpad
-            if (key >= Key.NumPad0 && key <= Key.NumPad9)
-            {
-                return (char)('0' + (key - Key.NumPad0));
-            }
-
-            // Handle other cases as needed
-            return '\0'; // default case, won't be reached with the allowed keys
-        }
-
-
-
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
             string docPath = "";

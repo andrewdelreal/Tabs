@@ -20,10 +20,6 @@ using System.Windows.Shapes;
 
 namespace TabsGenerator
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    /// 
     public class ComboBoxItem
     {
         public string Text { get; set; }
@@ -83,7 +79,6 @@ namespace TabsGenerator
         }
 
         // Measure Box Event Handlers
-
         private void Num_Measures_KeyDown(object sender, KeyEventArgs e)
         {
             if (((int)e.Key) < 34 || ((int)e.Key) > 43)
@@ -100,7 +95,6 @@ namespace TabsGenerator
         }
 
         // Fret Box event Handlers
-        
         private void Lowest_Fret_Text_Box_LostFocus(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrEmpty(Lowest_Fret_Text_Box.Text))
@@ -108,7 +102,6 @@ namespace TabsGenerator
                 Lowest_Fret_Text_Box.Text = "0";
             }
         }
-
        
         private void Highest_Fret_Text_Box_LostFocus(object sender, RoutedEventArgs e)
         {

@@ -187,6 +187,7 @@ namespace TabsGenerator
                 }
             }
 
+            // make sure at least a chord is selected
             int numChords = selectedChords.Count;
             if (numChords != 0)
             {
@@ -337,12 +338,8 @@ namespace TabsGenerator
 
                 // move string initialization to proper methods
                 string[] strings;
-                for (int i = 0; i < functions.Count(); i++)
-                {
-                    Console.WriteLine(functions[i]);
-                }
 
-                strings = RandomChords(measures_this_line);
+                strings = RandomNotesAndChords(measures_this_line);
                 // Complete each string line
                 for (int i = 0; i < NUM_STRINGS; i++)
                 {
