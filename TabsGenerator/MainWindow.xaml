@@ -234,10 +234,6 @@
                         x:Name="RandomChordsCheck"
                         Content="Random Chords" 
                         FontSize="11"/>
-                    <RadioButton 
-                        x:Name="BothNotesAndChordsCheck"
-                        Content="Both" 
-                        FontSize="11"/>
                 </StackPanel>
                 
                 <!--Create Button-->

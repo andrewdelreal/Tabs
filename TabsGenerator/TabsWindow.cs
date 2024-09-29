@@ -49,13 +49,7 @@ namespace TabsGenerator
         {
             string retString = "";
 
-            if (_MainWindow.BothNotesAndChordsCheck.IsChecked == true)
-            {
-                retString = NotesAndChordsString();
-                // For combining both, I could make the actual note placement/chord placement a method
-                // to individually add a note. So I could call a proportion of notes to chords
-            }
-            else if (_MainWindow.RandomNotesCheck.IsChecked == true)
+            if (_MainWindow.RandomNotesCheck.IsChecked == true)
             {
                 retString = NotesString();
             }
@@ -291,97 +285,6 @@ namespace TabsGenerator
                 }
             }
         }
-
-        string NotesAndChordsString()
-        {
-            // create ratio of notes to chords
-            string retString = "";
-            const int MAX_SPACES = 170;
-            const int NUM_STRINGS = 6;
-            const int NUM_BEATS = 4;
-
-            int NOTE_SPACE = int.Parse(_MainWindow.Note_Spacing_Text_Box.Text);
-            int CHORD_SPACE = int.Parse(_MainWindow.Chord_Spacing_Text_Box.Text);
-            int MAX_MEASURES_PER_LINE = MAX_SPACES / (NOTE_SPACE * NUM_BEATS);
-            int NUM_MEASURES = int.Parse(_MainWindow.Num_Measures_Text_Box.Text);
-
-            double note_multiplier = 0.5;
-            double chord_multiplier = 0.5;
-
-            int measures_left = NUM_MEASURES;
-            while (measures_left > 0) // while there are measures left to print
-            {
-                // then based on list or before make the calculation for measures thi line
-                // Need to make num_notes based on the num of beats and the combined max
-                // dived note space
-                int note_spaces = (int)(note_multiplier * (double)MAX_SPACES);
-                int chord_spaces = (int)(chord_multiplier * (double)MAX_SPACES);
-
-                int num_notes = note_spaces / (NOTE_SPACE * NUM_BEATS);
-                int num_chords = chord_spaces / (CHORD_SPACE * NUM_BEATS);
-                // add the list of function calls 
-                List<string> functions = new List<string>();   
-                for (int i = 0; i < num_notes; i++)
-                {
-                    functions.Add("note");
-                }
-                for (int i = 0; i < num_chords; i++)
-                {
-                    functions.Add("chord");
-                }
-                Shuffle(functions);
-                // dont use old max measures per line
-                // for each line of music
-                int measures_this_line = MAX_MEASURES_PER_LINE;
-                if (measures_left < MAX_MEASURES_PER_LINE)
-                    measures_this_line = measures_left;    // To adjust for the last remaining measures
-
-                // move string initialization to proper methods
-                string[] strings;
-
-                strings = RandomNotesAndChords(measures_this_line);
-                // Complete each string line
-                for (int i = 0; i < NUM_STRINGS; i++)
-                {
-                    strings[i] = stringHeaders[i] + strings[i] + "|";
-                }
-
-                // concatenate strings to one large string to print
-                for (int i = 0; i < NUM_STRINGS; i++)
-                {
-                    retString += "\n" + strings[i];
-                }
-                retString += "\n";
-
-                measures_left -= MAX_MEASURES_PER_LINE;
-            }
-            return retString;
-        }
-
-        string[] RandomNotesAndChords(int measures_this_line)
-        {
-            const int NUM_STRINGS = 6;
-
-            int NUM_MEASURES = measures_this_line;
-            int NOTE_SPACE = int.Parse(_MainWindow.Chord_Spacing_Text_Box.Text);
-
-            string[] strings = new string[NUM_STRINGS];
-            return strings;
-        }
-
-        static void Shuffle<T>(List<T> list)
-    {
-        Random rng = new Random();
-        int n = list.Count;
-        while (n > 1)
-        {
-            n--;
-            int k = rng.Next(n + 1);
-            T value = list[k];
-            list[k] = list[n];
-            list[n] = value;
-        }
-    }
 
         void InitializeChordDictionary()
         {
